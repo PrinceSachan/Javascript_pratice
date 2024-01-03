@@ -1,13 +1,11 @@
-let n = 5;
-let start = 1
-for(let i = 0; i < n; i++){
-    if(i%2 == 0){
-        start = start - 1
+let rows = 5;
+
+for(let i = 1; i <= rows; i++) {
+    let str = ""
+    for(let j = 1; j <= i; j++){
+        str += (j%2 ==0) ? '0' : '1'
     }
-    for(let j = 0; j<= i; j++){
-        start += start
-    }
-    start = "\n"
+    console.log(str)
 }
 
-console.log(start)
+// console.log(start)
