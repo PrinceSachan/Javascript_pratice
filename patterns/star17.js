@@ -1,27 +1,26 @@
-let rows = 5;
+let rows = 4;
 let str = "";
 
 for(let i = 0; i < rows; i++){
     // space
-    for(let j = 1; j < rows - i - 1; j++){
-        str += "*"
+    for(let j = 0; j < 2 - i + 1; j++){
+        str += " "
     }
 
     // character
-    let breakPoint = 2 * i + 1 / 2
-    for(let j = 1; j < 2 * i + 1; j++){
-        if(j > breakPoint){
+    for(let j = 0; j < 2 * i + 1; j++){
+        let breakPoint = (2 * i + 1) / 2
+        if(j < breakPoint){
             str += String.fromCharCode(65 + j)
-        } else {
-            str += String.fromCharCode(65 + j - 1)
+        }else {
+            str += String.fromCharCode(65 + 2 * i - j)
         }
     }
 
     // space
-    for(let j = 1; j < rows - i - 1; j++){
-        str += "+"
+    for(let j = 0; j < 2 - i + 1; j++){
+        str += " "
     }
     str += "\n"
 }
-
 console.log(str)
