@@ -1,0 +1,16 @@
+function freqnent(nums) {
+    let freq = nums.sort((a,b) => a - b);
+    let n = nums.length
+    let i = 0;
+    while(i < n){
+        let first_index = freq.indexOf(freq[i]);
+        let last_index = freq.lastIndexOf(freq[i]);
+        i = last_index
+
+        // count the frequency
+        let eleFreq = last_index - first_index + 1;
+        console.log(freq[i], eleFreq);
+        i++ 
+    }
+}
+freqnent([1,2,1,1,3,3])
