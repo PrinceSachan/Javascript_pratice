@@ -25,7 +25,11 @@ function freqCount(arr) {
     for(let i = 0; i < arr.length; i++){
         freqArr[arr[i]] += 1
     }
-    console.log(freqArr)
+    console.log(freqArr, '\n')
+
+    // for(let j = 0; j<freqArr.length;j++){
+    //     console.log(first)
+    // }
 
     // for (let j = 0; j< freqArr.length; j++) {
     //     let value
