@@ -15,3 +15,10 @@
 - The do...while statements combo defines a code block to be executed once, and repeated as long as a condition is true.
 - The continue statement breaks one iteration (in the loop) {skip}, if a specified condition occurs, and continues with the next iteration in the loop.
 - The break statement can also be used to jump out of a loop.
+
+## Day6
+- Map, filter & reduce are higher order functions: - They are usually to transform an array
+- Map transform the whole array and return new array
+- Filter transform the array based on some logic and returned the filtered array
+- Reduce method take all elements of the array and gives a single element based on some logic
+- 

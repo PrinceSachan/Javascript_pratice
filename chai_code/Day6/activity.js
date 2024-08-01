@@ -57,3 +57,5 @@ for(let i = 0; i < row; i++) {
 
 console.log('Array2D', twoDArr);
 
+console.log(`Access number four in 2D arr ${twoDArr[1][1]}`)
+

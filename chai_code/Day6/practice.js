@@ -1,10 +1,22 @@
 // Akshay Saini
 const users = [
-    {firstName: 'Prince', lastName: 'Sachan', age: 27},
+    {firstName: 'Prince', lastName: 'Sachan', age: 50},
     {firstName: 'Nawodit', lastName: 'Nayan', age: 25},
-    {firstName: 'Sangmesh', lastName: 'V. Reddy', age: 27},
+    {firstName: 'Sangmesh', lastName: 'V. Reddy', age: 30},
     {firstName: 'Anubhav', lastName: 'Sachan', age: 24}
 ]
+
+const reduceMethod = users.reduce((acc, curr) => {
+    if(curr.age < 30){
+        acc[curr.age] = curr.firstName
+    }
+    return acc
+}, {})
+
+console.log('Age with reduce method:', reduceMethod)
+
+const age30 = users.filter(x => x.age < 30).map(x => x.firstName)
+console.log('Age is less 30 with map and filter: ', age30)
 
 const fullName = users.map(x => x.firstName + ' ' + x.lastName)
 console.log('Full Name:', fullName)

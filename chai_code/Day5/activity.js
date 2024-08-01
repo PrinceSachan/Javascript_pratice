@@ -38,7 +38,7 @@ task6 = (str, v) => {
 }
 console.log(task6('Hello', 'a'))
 
-// act - 4 
+// act - 4 function parameter and default values
 function task7(a, b = 2) {
     console.log(a * b)
 }
@@ -51,3 +51,38 @@ function task8(name, age = 18){
 
 task8('Prince', 27)
 task8('Madhur')
+
+// act-5 higher order functions
+
+function para(num) {
+    console.log(`Hello times ${num}`)
+}
+
+function task9(n, fun){
+    for(let i = 0; i < n; i++) {
+        fun(i)
+    }
+}
+
+task9(5, para)
+
+function first(num) {
+    let res = num * 2
+    console.log(`function 1 is called and multiply ${num} by 2`, res)
+    return res
+}
+
+function second(num) {
+    let res = num + 5
+    console.log(`function 2 is called and add 5 to ${num}`, res)
+    return res
+}
+
+function task10(fun1, fun2, value) {
+    let res1 = fun1(value)
+    let res2 = fun2(res1)
+    console.log(`value applied to fun1 and then result of fun1 applied to fun2 final result will be:`, res2)
+    return res2
+}
+
+console.log(task10(first, second, 5))
